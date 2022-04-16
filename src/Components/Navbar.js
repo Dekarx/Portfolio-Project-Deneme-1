@@ -10,7 +10,7 @@ function Navbar() {
     <>
     
 
-        <nav className="navbar navbar-expand-lg navbar-light bg-dark">
+        <nav className="navbar navbar-expand-lg navbar-light">
         
             <div className="container">
 
