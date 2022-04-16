@@ -27,8 +27,8 @@ body {
 
 nav a.nav-link {
   /* font-weight: 500; */
-  letter-spacing: 0.0375rem;
-  cursor: pointer;
+  letter-spacing: 0.0375rem; /* Linkler arası boşluk ml-mr falan koymayana gerek yok */
+  cursor: pointer; /* İmleci üstüne getirdiğinde pointer işaretçi simgesi gözükür */
 }
 
 nav ul li {
@@ -37,7 +37,7 @@ nav ul li {
 
 .navbar-nav > li > a {
   color: var(--primary-white) !important ;
-  font-size: 0.8rem;
+  font-size: 0.8rem; 
   margin-right: 0.75rem;
   margin-left: 0.75rem;
   border-top: 0.1875rem solid var(--primary-dark);
@@ -60,7 +60,7 @@ nav ul li {
 }
 
 .navbar-nav > li > a:hover {
-  border-top : 0.1875rem solid var(--primary-orange);
+  border-top : 0.1875rem solid var(--primary-orange); /* Fare ile üstüne geldiğinde kafasında çıkan çizgi */
 }
 
 
@@ -68,15 +68,15 @@ nav ul li {
 /******************** HEADER **********************/
 
 
-.header-wrapper {
+.header-wrapper { /* fotoğrafı arka plana yerleştirmek için */
   position: relative;
   background: url(BackGround.jpg) no-repeat;
   background-size: cover;
   background-position: center;
-  height: 90vh;
+  height: 90vh; /* fotoğrafın yükseklik olarak kapladığı alan */
 }
 
-.main-info {
+.main-info { /* İçindeki yazı ve elemetleri orataya sabitlemek için */
   display: flex;
 
   position: absolute; /* Bu kısım tüm div i ekranın ortasına ortalar */
@@ -97,7 +97,7 @@ nav ul li {
   text-transform: uppercase;
 }
 
-@media(max-width:768px) {
+@media(max-width:768px) { /* Telefon ekranlarındaki responsive yapı için */
   .main-info h1 {
     font-size: 1.7rem !important;
   }
@@ -110,7 +110,7 @@ nav ul li {
   color: var(--primary-white);
 }
 
-@media(max-width:768px) {
+@media(max-width:768px) { /* Telefon ekranlarındaki responsive yapı için */
   .typed-text {
     font-size: 1.3rem !important;
   }
@@ -119,12 +119,12 @@ nav ul li {
 /******************** HEADER MAİN OFFER **********************/
 
 .btn-main-offer {
-  border : 1px solid var(--primary-red);
+  border : 1px solid var(--primary-red); /*  */
   text-transform: uppercase;
-  border-radius: 0;
+  border-radius: 20%;
   padding: 0.625rem 0.75rem 0.75rem 0.75rem;
   color: var(--primary-white);
-  margin-top: 2rem;
+  margin-top: 2rem; /* mt-2 etkisi gibi düşün */
 }
 
 .btn-main-offer:hover {
@@ -137,10 +137,10 @@ nav ul li {
 
 /******************** Particles **********************/
 
-.tsparticles-canvas-el {
+/* .tsparticles-canvas-el {
   position: absolute;
   height: 100vh;
   width: 100vw;
   z-index: 1;
-}
+} */
 
