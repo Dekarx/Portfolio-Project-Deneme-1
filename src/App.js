@@ -4,7 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './Components/Navbar';
 import Header from './Components/Header';
 import AboutMe from './Components/AboutMe';
-import Services from './Services';
+import Services from './Components/Services';
+
 // import Particles from "react-tsparticles";  // Başka bir zaman ayrıntılı bak
 
 
