@@ -42,7 +42,10 @@ function Navbar() {
                             <a className="nav-link" href="#">Portfolio</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Contacts</a>
+                            <a className="nav-link" href="#">Happy Client</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link ayrı" href="#">Contacts</a>
                         </li>
                     
                     </ul>

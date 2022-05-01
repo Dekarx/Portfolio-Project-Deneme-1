@@ -6,6 +6,10 @@ import Header from './Components/Header';
 import AboutMe from './Components/AboutMe';
 import Services from './Components/Services';
 import Experience from './Components/Experience'
+import Portfolio from './Components/Portfolio';
+import PopUpExtra from './Components/PopUpExtra/PopUpExtra';
+import Team from './Team/Team';
+
 
 // import Particles from "react-tsparticles";  // Başka bir zaman ayrıntılı bak
 
@@ -40,6 +44,12 @@ function App() {
       <Services />
 
       <Experience />
+
+      <Portfolio />
+
+      {/* <PopUpExtra /> */}
+
+      <Team />
     
     
     </>
