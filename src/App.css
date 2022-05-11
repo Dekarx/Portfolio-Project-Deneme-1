@@ -17,7 +17,16 @@ body {
   width: 4.25rem;
 }
 
+<<<<<<< Updated upstream
 /*------- Menu Links -------*/
+=======
+.navbar {
+  background-color: #0f0e13;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/****** Menu Links ******/
+>>>>>>> Stashed changes
 
 nav a.nav-link {
   /* font-weight: 500; */
@@ -43,10 +52,614 @@ nav ul li {
   /* height: 6rem !important; */   /* navbarın yüksekliğini ayarlıyor */
 }
 
+<<<<<<< Updated upstream
 .navbar-nav > li > a.active , .navbar-nav > li > a.active:focus {
   border-top : 0.1875rem solid var(--primary-orange);
 }
 
 .navbar-nav > li > a:hover {
   border-top : 0.1875rem solid var(--primary-orange);
+=======
+@media(max-width:768px) {
+  .navbar-brand {
+    width: 7rem;
+  }
+}
+
+.navbar-nav > li > a.active , .navbar-nav > li > a:focus {
+  border-top : 0.1875rem solid var(--primary-orange); 
+}
+
+.navbar-nav > li > a:hover {
+  border-top : 0.1875rem solid var(--primary-orange); /* Fare ile üstüne geldiğinde kafasında çıkan çizgi */
+}
+
+.navbar-nav > li > a.ayrı:hover {
+  border-top : 0.1875rem solid blue; /* Fare ile üstüne geldiğinde kafasında çıkan çizgi */
+}
+
+
+
+
+
+/******************** HEADER **********************/
+
+
+.header-wrapper { /* fotoğrafı arka plana yerleştirmek için */
+  position: relative;
+  background: url(BackGround.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* fotoğrafın yükseklik olarak kapladığı alan */
+}
+
+.main-info { /* İçindeki yazı ve elemetleri orataya sabitlemek için */
+  display: flex;
+
+  position: absolute; /* Bu kısım tüm div i ekranın ortasına ortalar */
+  top: 0; /* Ekranın hepsini div olarak düşün bir sürü boşluk var ; */
+  left: 0; /* bu "0" eklemelerimiz boşlukları atıyor hepsini tam ortaya koymamızı sağlıyor */
+  right: 0;
+  bottom: 0;
+  flex-direction: column; /* Sırayla hepsini aşağı atar ul li mantığı gibi */
+  justify-content: center; /* Dikeyde ekranın ortasına ortalar */
+  align-items: center; /* Yatayda elemntleri ortalar */
+  text-align: center; /* Yatayda yazıları ortalar */
+  font-family: 'Roboto Condensed', sans-serif;
+  z-index: 1;
+}
+
+.main-info h1 {
+  color: var(--primary-orange);
+  text-transform: uppercase;
+}
+
+@media(max-width:768px) { /* Telefon ekranlarındaki responsive yapı için */
+  .main-info h1 {
+    font-size: 1.7rem !important;
+  }
+}
+
+/***** TYPED *****/
+
+.typed-text {
+  font-size: 2rem;
+  color: var(--primary-white);
+}
+
+@media(max-width:768px) { /* Telefon ekranlarındaki responsive yapı için */
+  .typed-text {
+    font-size: 1.3rem !important;
+  }
+}
+
+/***** HEADER MAİN OFFER ******/
+
+.btn-main-offer {
+  border : 1px solid var(--primary-red); 
+  text-transform: uppercase;
+  border-radius: 20%;
+  padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+  color: var(--primary-white);
+  margin-top: 2rem; /* mt-2 etkisi gibi düşün */
+}
+
+.btn-main-offer:hover {
+  text-decoration: none; /* altçizgisini kaldırır */
+  background-color: var(--primary-hover-red); /* üzerine geldiğinde arka plan değişimi */
+  color: var(--primary-white); /* button text rengi */
+  transition:  .2s ease-in-out; /* geçikmeli gelmesini sağlar */
+}
+
+
+/******************** Particles **********************/
+
+/* .tsparticles-canvas-el {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+} */
+
+
+/******************** ABOUT ME **********************/
+
+.aboutMeContainer {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.photo-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-img {
+  width: 16rem;
+  border-radius: 50%;
+  padding: .3rem;
+  border: 1px solid var(--primary-orange);
+}
+
+.aboutMe-heading {
+  color: var(--primary-orange);
+  text-transform: uppercase;
+}
+
+@media(max-width:468px) { /* Telefon ekranlarındaki responsive yapı için */
+  .profile-img {
+    width: 10rem;
+  }
+}
+
+
+/******************** SERVİCES **********************/
+
+.services {
+  text-align: center;
+  padding-bottom: 2rem;
+  background: var(--primary-light-grey);
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.services h3 {
+  margin-top: 0.7rem;
+}
+
+.services h1 {
+  color: rgb(52, 58, 60);
+  text-transform: uppercase;
+}
+
+.services .circle { /* yuvarlak sarı alan için oluşturduk ortaladık */
+  position: relative;
+  margin: 0.0375rem auto;
+  background: var(--primary-orange);
+  border-radius: 50%;
+  width: 3.125rem;
+  height: 3.125rem;
+} 
+
+.services .icon {
+  font-size: 1.4rem;
+  color: var(--primary-white);
+  
+  position: absolute; /* iconları alan içersine ortalamak için yaptık */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.services .box { /* kutu oluşturduk */
+  height: 16rem;
+  border-bottom: 0.3125rem solid var(--primary-orange);
+  padding: 0.625rem;
+  margin-bottom: 1.825rem;
+  background: var(--primary-white);
+  transition: 0.5s ease-in-out ;
+}
+
+.services .box:hover {
+  background: var(--primary-orange) ;
+  border-bottom: 0.3125rem solid var(--primary-dark-hard);
+  cursor: pointer;
+}
+
+.services .box:hover .icon {
+  color: var(--primary-dark-hard);
+}
+
+.services .box:hover .circle {
+  background: var(--primary-white);
+}
+
+.services .box:hover p {
+  color: var(--primary-white);
+}
+
+
+/******************** EXPERİENCE **********************/
+
+.experience {
+  font-family: 'Roboto Condensed', sans-serif;
+  padding: 0.7rem;
+}
+
+.experience-wrapper { /* Uzun Çubuk */
+  position: relative;
+  padding: 3.125rem 0;
+  overflow: hidden; /* uzun ince çubuk yokar */
+}
+
+.experience h1 {
+  text-transform: uppercase;
+  color: var(--primary-orange);
+}
+
+.experience-wrapper::before { /* Uzun Çubuk */
+  position: absolute; /* container ile bağlı bir şekilde hareket etmesi için absolute dedik */
+  content: "";
+  top: 0; /* div in en başından başlaması için */
+  left: 50%; /* çubuğu ortalamak için */
+  margin-left: -0.0625rem; /* çubuğu tam ortalamak için biraz sağdan sola çektik */
+  width: 0.125rem; /* çubuğun kalınlığını ayarladık */
+  height: 100%; /* tüm div de devam etmesi için dedik */
+  background: var(--primary-grey);
+  z-index : 1; /* blok topunun altında kalması için verdik */
+}
+
+.timeline-block { /* tari,nokta,p,h3 ün içinde olduğu komple kısım içinde olduğu tüm div */
+  width: calc(50% + 0.5rem); /* Genişliği yüzde 50 ayarladık noktaları da tam ortaya yerleşmesi için 0.5rem ekledik */
+  display: flex;  /*  */
+  justify-content: space-between; /* yatayda hizalamak için kullanılır , ilk nesneyi başa diğerini sona atacak şekilde ayarlar , sağa sola düzgün hizalamak için kullandık */
+  clear: both; /* daha temiz bir görüntü oluşturur , divlerin iç içe geçmesini önler */
+}
+
+.timeline-block-right {
+  float: right;
+}
+
+.timeline-block-left {
+  float: left;
+  direction: rtl; /* şöyle açıklayayım noktalar ltf yaparsak nokta bir ortada bir en solda olur böyle ise boktaların hepsini ortaya atarız bir nevi sağdan sola akış uydurarak kandırıyoruz gibi düşün */
+}
+
+.marker { /* nokta kısmını ayarlıyoruz */
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 0.3125rem solid var(--primary-dark-hard);
+  background: var(--primary-orange);
+  margin-top: 0.625rem;
+  z-index: 3; /* en üstte baskın gözükmesini sağlar */
+}
+
+.timeline-content { /* h3,p nin olduğu div */
+  width: 95%; /* noktaları kaydırmaması ve daha temiz görüntü olması için genişliğini azalttık ; 100% yapma yeter */
+  padding: 0 0.9375rem; /* top and right padding */
+  color: var(--primary-dark-grey);
+  direction: ltr;
+}
+
+.timeline-content h3 {  /* h3 başlığı */
+  margin-top: 0.3125rem;
+  color: var(--primary-red);
+  font-weight: 900;
+}
+
+/****** MEDİA EXPERİENCE *****/
+
+@media(max-width:768px) { /* Telefon ekranlarındaki responsive yapı için */
+  .experience .container {
+    padding-left: 0; /* sıfırlamazsak nokta sağa kayar tam üstüne oturtturduk */
+  }
+  .experience-wrapper::before {
+    left: 0.5rem; /* noktanın üstüne koymak için 0.5rem lik bir aralık verdik soldan */
+    margin-bottom: 1.875rem;
+  }
+  .timeline-block-right {
+    float: none; /* floatı ortadan kaldırdık sağa sola atmasını engeleedik tek satır alt alta koyduk */
+    width: 100%; /* ekranı doldursun diye fulledik yazıyı */
+  }
+  .timeline-block-left {
+    float: none; /* floatı ortadan kaldırdık sağa sola atmasını engeleedik tek satır alt alta koyduk */
+    direction: ltr; /* yapmazsak noktalar sağa kayar hoş görüntü olmaz */
+    width: 100%; /* ekranı doldursun diye fulledik yazıyı */
+  }
+}
+
+
+
+/************************ PORTFOLIO *********************************/
+
+.portfolio-wrapper {
+  font-family: 'Roboto Condensed', sans-serif;
+  background: var(--primary-light-grey);
+  padding: 3rem 0;
+}
+
+.portfolio-wrapper h1 {
+  color: var(--primary-orange);
+}
+
+.portfolio-image {
+  width: 15rem;
+  border: 1px solid var(--primary-orange);
+  padding: 0 0.5rem;
+}
+
+.portfolio-image-box {
+  position: relative;
+  margin: 1rem;
+}
+
+/****** OVERFLOW BOX *****/
+
+.overflow {
+  position: absolute;
+   opacity: 0;
+   background: var(--primary-black);
+   width: 15rem;
+   height: 8rem;
+   top: 0;
+  border: 1px solid var(--primary-red);
+  cursor: pointer;
+}
+
+.portfolio-image-box:hover .overflow {
+  opacity: 60%;
+  transition: 0.3s ease-in-out;
+}
+
+.portfolio-icon {
+  position: absolute;
+  opacity: 0;
+  margin-left: -8rem;
+  margin-top: 3.6rem;
+  color: var(--primary-orange);
+  font-size: 1.5rem;
+}
+
+.portfolio-image-box:hover .portfolio-icon {
+  opacity: 70%;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/***** OVERFLOW BOX *****/
+
+.portfolio-image-popupbox {
+  width: 45rem;
+  padding: 0 0.5rem;
+}
+
+.hyper-link {
+  cursor: pointer; 
+  color: var(--primary-orange);
+}
+
+.hyper-link:hover {
+  color: var(--primary-red);
+}
+
+/***** MEDIA PORTFOLIO *****/
+
+@media(max-width: 768px) {
+  .portfolio-image-popupbox {
+    width: 100%;
+  }
+}
+
+@media(max-height: 570px) {
+.popupbox-wrapper {
+  height: 100%;
+}
+  .portfolio-image-popupbox {
+    width: 50%;
+  }
+}
+
+@media(max-height: 280px) {
+  .popupbox-wrapper {
+    height: 90%;
+  }
+    .portfolio-image-popupbox {
+      width: 30%;
+    }
+  }
+
+/*------------ POP UP EXTRA ------------------*/
+
+/************************* OUR TEAM > TESTİMONİALS *************************/
+
+.testimonials {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-image: url(testimonials-bg.jpg);
+  background-size: cover;
+  background-color: var(--primary-black);
+  text-align: center;
+  padding-bottom: 4rem;
+  margin-bottom: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.testimonials h1 {
+  color: var(--primary-orange);
+  padding: 3rem 0;
+  text-transform: uppercase;
+}
+
+.testimonials-content {
+  text-align: center;
+  max-width: 53.125rem;
+  margin: 0 auto 2rem auto;
+  background: var(--primary-transparent-black);
+}
+
+.myCarousel {
+  color: var(--primary-white);
+  background: transparent;
+  margin-top: -6%;
+  width: 54%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 6%;
+  padding-bottom: 8%;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 17.875rem;
+}
+
+.myCarousel h3 {
+  color: var(--primary-orange);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.myCarousel p {
+  color: var(--primary-grey);
+}
+
+.carousel .slide {
+  background: transparent !important;
+  height: 100% !important;
+  padding-top: 2rem ;
+}
+
+
+.carousel .slide img {
+  width: 10rem !important;
+  border-radius: 50%;
+  padding-bottom: 2rem;
+}
+
+.carousel-root {
+  margin: auto !important;
+  margin-top: 3% !important;
+}
+
+
+/******************** CONTACS COMPONENT **********************/
+
+.contacts {
+  font-family: 'Roboto Condensed', sans-serif;
+  background: var(--primary-dark-hard);
+  padding: 3rem 0;
+  height: 100vh;
+}
+
+.contacts h1 {
+  color: var(--primary-orange);
+  padding: 1.3rem 0; /* yukarı aşağı 1.3rem boşluk - yanlardan 0 boşluk */
+  text-transform: uppercase;
+}
+
+.contacts p {
+  color: var(--primary-light-grey);
+  font-size: 1.2rem;
+}
+
+.contacts .container {
+  padding: 4rem 0; /* 4rem yukarı ve aşağı kısımdan boşluk bırakır - 0 ise sağdan ve soldan paddingleri yok eder */
+}
+
+/****** CONTACS INPUTS *****/
+
+.contacts input, .contacts textarea {
+  width: 100%;
+  box-sizing: border-box; /* bunu verdiğimiz zaman paddingi yalnızca width ve height e göre yapar border eklediğimiz zaman kutumuza o borderı katmaz */
+  background: none;
+  resize: none; /* normalde textarea koyduğumuzda bize boyutlandırma seçeneği verir sağ alt köşede kullanıcı bunu kullanarak ekran düzenini bozabilir bu durumu engellemiş olduk */
+  border: 0;
+  border-bottom: 0.125rem solid var(--primary-dark-grey);
+  border-radius: 0;
+  color: var(--primary-orange);
+  outline: 0 !important; /* border üstüne işlem yapmamıza yarayayacak -  */
+  box-shadow: none !important;
+  margin-bottom: 1rem;
+  padding-left: 0 !important; /* yazıları tam sağa yatırmamıza yarıyor */
+}
+
+.contacts input:focus , .contacts textarea:focus {
+  background: transparent; /* üstüne tıklandığı zaman arka plan rengini almasını sağlar şeffalık verir */
+  color: var(--primary-orange);
+  border-bottom: 0.125rem solid var(--primary-dark-grey);
+}
+
+.contacts textarea {
+  height: 12.2rem !important; 
+}
+
+.contact-btn {
+  margin: 1rem 0 0 0 0;
+  width: 100%;
+  background: none;
+  border-radius: 0%;
+  border: solid 0.125rem var(--primary-orange);
+}
+
+.contact-btn:hover {
+  background: var(--primary-orange);
+  transition: .5s ease-in-out !important;
+}
+
+.line { /* input ve texarea altında kayıp dolduran çizgi oluşturmak için */
+  position: relative;
+  top: -0.8rem; /* tam borderın üstüne koymak için */
+  width: 0;
+  height: 0.125rem;
+  background: var(--primary-orange);
+  display: inline-block;  /* eklendiği kısma ait olur , koymaz isek alt çizgi üstüne blok oluşmaz yerleşmez */
+}
+
+input:focus+.line , textarea:focus+.line { /* iki özelliği birleştirerek kullanma */
+  width: 100%;
+  transition: width 0.5s ease-in-out; /* genişlik özelliğini 0 dan 100% e 0.5s de uzatarak kayan çizgi oluşturur */
+}
+
+input.form-control {
+  margin: -0.3rem 0;
+}
+
+textarea.form-control {
+  margin: -0.3rem 0;
+}
+
+.alert {
+  color: green !important;
+}
+
+/***** CONTACS MEDİA ******/
+
+@media( max-width :768px ) {
+
+  .contact {
+    overflow-x: hidden;
+  }
+
+  .contacts .container {
+    padding: 0 1rem;
+  }
+
+  .contacts p {
+    padding: 0 0.4rem;
+  }
+
+}
+
+
+/******************** FOOTER COMPONENT **********************/
+
+.footer {
+  background: var(--primary-black);
+  color: var(--primary-dark-grey);
+  padding: 3rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--primary-dark-grey);
+}
+
+.footer a:hover {
+  text-decoration: none;
+  color: var(--primary-orange);
+  cursor: pointer;
+}
+
+.footer p {
+  margin-bottom: 0;
+}
+
+
+/***** FOOTER MEDİA ******/
+
+@media( max-width :768px ) {
+
+  .SocialIcons {
+    padding-top: 3rem;
+  }
+
+>>>>>>> Stashed changes
 }
