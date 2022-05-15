@@ -1,7 +1,4 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faWaveSquare } from '@fortawesome/free-solid-svg-icons'
-// import { fab } from '@fortawesome/free-brands-svg-icons'
 import { IconContext } from 'react-icons';
 import { FaFacebookF , FaDesktop , FaFileCode , FaGoogle} from 'react-icons/fa';
 
@@ -9,8 +6,8 @@ function Services() {
   return (
     // hepsine ortak aynı icon özellikleri için Alttaki satıra yaz
     <IconContext.Provider value={{ color : "" , size : ""}}>  
-        <div id='services' className='services'>
-        <h1 className="py-5"> My Services</h1>
+        <div id='services' className='services pt-5'>
+        <h1 className="py-5 mt-5"> My Services</h1>
             <div className="container">
                 <div className="row">
 

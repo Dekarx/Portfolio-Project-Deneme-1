@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 
 :root {
-  --primary-white : #fff;
+  --primary-dark: rgba(255,255,255,0);
+  --primary-white: #ffffff;
+  --primary-light-grey: #f4f4f4;
+  --primary-grey: #ccd1d9;
+  --primary-dark-grey: #666666;
   --primary-orange: #f9ab00;
-  --primary-dark: rgba(255,255,255,0)
+  /* --primary-dark: rgb(52, 58, 64); */
+  --primary-red: #ef4035;
+  --primary-hover-red: #f33501;
+  --primary-black: #000000;
+  --primary-transparent-black: rgba(0,0,0,0.7);
+  --primary-green: green;
 }
 
 body {
@@ -14,19 +23,19 @@ body {
 /******************** NAVBAR **********************/
 
 .logo {
-  width: 4.25rem;
+  width: 3.25rem;
+  height: 3.25rem;
 }
 
-<<<<<<< Updated upstream
+
 /*------- Menu Links -------*/
-=======
+
 .navbar {
   background-color: #0f0e13;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
 /****** Menu Links ******/
->>>>>>> Stashed changes
 
 nav a.nav-link {
   /* font-weight: 500; */
@@ -52,14 +61,14 @@ nav ul li {
   /* height: 6rem !important; */   /* navbarın yüksekliğini ayarlıyor */
 }
 
-<<<<<<< Updated upstream
 .navbar-nav > li > a.active , .navbar-nav > li > a.active:focus {
   border-top : 0.1875rem solid var(--primary-orange);
 }
 
 .navbar-nav > li > a:hover {
   border-top : 0.1875rem solid var(--primary-orange);
-=======
+}
+
 @media(max-width:768px) {
   .navbar-brand {
     width: 7rem;
@@ -120,6 +129,12 @@ nav ul li {
   }
 }
 
+@media(max-width:468px) { 
+  .main-info h1 {
+    font-size: 1.5rem !important;
+  }
+}
+
 /***** TYPED *****/
 
 .typed-text {
@@ -149,7 +164,10 @@ nav ul li {
   background-color: var(--primary-hover-red); /* üzerine geldiğinde arka plan değişimi */
   color: var(--primary-white); /* button text rengi */
   transition:  .2s ease-in-out; /* geçikmeli gelmesini sağlar */
+  cursor: pointer;
 }
+
+
 
 
 /******************** Particles **********************/
@@ -166,16 +184,22 @@ nav ul li {
 
 .aboutMeContainer {
   font-family: 'Roboto Condensed', sans-serif;
+  height: 100vh;
+}
+
+.aboutMeContainer .row {
+  padding-top: 10rem;
 }
 
 .photo-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: -2.5rem;
 }
 
 .profile-img {
-  width: 16rem;
+  width: 25rem;
   border-radius: 50%;
   padding: .3rem;
   border: 1px solid var(--primary-orange);
@@ -184,14 +208,62 @@ nav ul li {
 .aboutMe-heading {
   color: var(--primary-orange);
   text-transform: uppercase;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
 }
 
 @media(max-width:468px) { /* Telefon ekranlarındaki responsive yapı için */
+
   .profile-img {
     width: 10rem;
+    margin-bottom: -3rem;
   }
+
+  .aboutMeContainer {
+    height: 100vh !important;
+  }
+
+  .aboutMeContainer .row {
+    padding-top: 2rem !important;
+  }
+
+  .aboutMe-heading {
+    padding-top: -5rem !important;
+  }
+
 }
 
+@media(max-width:768px) { /* Telefon ekranlarındaki responsive yapı için */
+
+  .aboutMeContainer {
+    height: 90vh;
+  }
+
+  .aboutMeContainer .row {
+    padding-top: 2rem;
+  }
+
+  .profile-img {
+    width: 15rem;
+  }
+
+}
+
+@media(max-width:1074px) { 
+
+  .aboutMeContainer {
+    height: 90vh;
+  }
+
+  .aboutMeContainer .row {
+    padding-top: 2rem;
+  }
+
+  .profile-img {
+    width: 15rem;
+  }
+
+}
 
 /******************** SERVİCES **********************/
 
@@ -200,6 +272,7 @@ nav ul li {
   padding-bottom: 2rem;
   background: var(--primary-light-grey);
   font-family: 'Roboto Condensed', sans-serif;
+  height: 100vh;
 }
 
 .services h3 {
@@ -242,7 +315,7 @@ nav ul li {
 .services .box:hover {
   background: var(--primary-orange) ;
   border-bottom: 0.3125rem solid var(--primary-dark-hard);
-  cursor: pointer;
+  cursor: cell;
 }
 
 .services .box:hover .icon {
@@ -258,11 +331,58 @@ nav ul li {
 }
 
 
+@media(max-width:468px) { /* Telefon ekranlarındaki responsive yapı için */
+  
+  .services {
+    max-height: 190vh;
+  }
+  
+  
+}
+
+@media(max-width:540px) { /* Telefon ekranlarındaki responsive yapı için */
+  
+  .services {
+    height: 190vh !important;
+  }
+  
+  .services h1 {
+    margin-top: -3rem !important;
+  }
+  
+}
+
+
+@media(max-width:768px) { 
+  
+  .services {
+    height: 110vh;
+  }
+  
+  .services h1 {
+    margin-top: -3rem !important;
+  }
+  
+}
+
+@media(max-width:1074px) { 
+
+  .services {
+    max-height: 195vh;
+  }
+
+  .services h1 {
+    margin-top: -3rem !important;
+  }
+
+}
+
 /******************** EXPERİENCE **********************/
 
 .experience {
   font-family: 'Roboto Condensed', sans-serif;
   padding: 0.7rem;
+  margin-bottom: 3rem;
 }
 
 .experience-wrapper { /* Uzun Çubuk */
@@ -308,7 +428,7 @@ nav ul li {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  border: 0.3125rem solid var(--primary-dark-hard);
+  border: 0.3125rem solid var(--primary-dark-grey);
   background: var(--primary-orange);
   margin-top: 0.625rem;
   z-index: 3; /* en üstte baskın gözükmesini sağlar */
@@ -352,10 +472,12 @@ nav ul li {
 
 /************************ PORTFOLIO *********************************/
 
+
 .portfolio-wrapper {
   font-family: 'Roboto Condensed', sans-serif;
   background: var(--primary-light-grey);
   padding: 3rem 0;
+  height: 100vh;
 }
 
 .portfolio-wrapper h1 {
@@ -373,6 +495,21 @@ nav ul li {
   margin: 1rem;
 }
 
+.portfolio-image-box .box-title {
+  color: var(--primary-red);
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.portfolio-image-box .box-desc {
+  width: 15rem;
+  margin : 0.5rem 0;
+  font-weight: 500;
+  color: var(--primary-dark-grey);
+}
+
 /****** OVERFLOW BOX *****/
 
 .overflow {
@@ -381,9 +518,8 @@ nav ul li {
    background: var(--primary-black);
    width: 15rem;
    height: 8rem;
-   top: 0;
+   top: 2.2rem;
   border: 1px solid var(--primary-red);
-  cursor: pointer;
 }
 
 .portfolio-image-box:hover .overflow {
@@ -394,11 +530,20 @@ nav ul li {
 .portfolio-icon {
   position: absolute;
   opacity: 0;
-  margin-left: -8rem;
-  margin-top: 3.6rem;
+  margin-left: 7rem;
+  margin-top: -10rem;
   color: var(--primary-orange);
   font-size: 1.5rem;
 }
+
+/* .portfolio-icon {
+  position: relative;
+  opacity: 0;
+  margin-left: 7rem;
+  margin-top: -20rem;
+  color: var(--primary-orange);
+  font-size: 1.5rem;
+} */
 
 .portfolio-image-box:hover .portfolio-icon {
   opacity: 70%;
@@ -406,49 +551,50 @@ nav ul li {
   cursor: pointer;
 }
 
-/***** OVERFLOW BOX *****/
-
-.portfolio-image-popupbox {
-  width: 45rem;
-  padding: 0 0.5rem;
-}
-
-.hyper-link {
-  cursor: pointer; 
-  color: var(--primary-orange);
-}
-
-.hyper-link:hover {
-  color: var(--primary-red);
-}
 
 /***** MEDIA PORTFOLIO *****/
 
-@media(max-width: 768px) {
-  .portfolio-image-popupbox {
-    width: 100%;
-  }
-}
 
-@media(max-height: 570px) {
-.popupbox-wrapper {
-  height: 100%;
-}
-  .portfolio-image-popupbox {
-    width: 50%;
-  }
-}
+@media( max-width :540px ) {
+  
+ 
 
-@media(max-height: 280px) {
-  .popupbox-wrapper {
-    height: 90%;
-  }
-    .portfolio-image-popupbox {
-      width: 30%;
-    }
+  .portfolio-wrapper h1 {
+    margin-top: -2.5rem !important;
+    margin-bottom: -1.5rem;
   }
 
-/*------------ POP UP EXTRA ------------------*/
+}
+
+
+@media( max-width :768px ) {
+  
+  .portfolio-wrapper {
+    max-height: 230vh ;
+    padding-bottom: 80rem !important;
+  }
+
+  .portfolio-wrapper h1 {
+    margin-top: -2.5rem !important;
+    margin-bottom: -1.5rem;
+  }
+
+}
+
+@media( max-width : 1100px ) {
+  
+  .portfolio-wrapper {
+    height: 110vh !important;
+  }
+
+  .portfolio-wrapper h1 {
+    margin-top: -2.5rem !important;
+    margin-bottom: -1.5rem;
+  }
+
+}
+
+
 
 /************************* OUR TEAM > TESTİMONİALS *************************/
 
@@ -520,11 +666,13 @@ nav ul li {
 }
 
 
+
+
 /******************** CONTACS COMPONENT **********************/
 
 .contacts {
   font-family: 'Roboto Condensed', sans-serif;
-  background: var(--primary-dark-hard);
+  background: rgb(61, 63, 63);
   padding: 3rem 0;
   height: 100vh;
 }
@@ -606,8 +754,17 @@ textarea.form-control {
   margin: -0.3rem 0;
 }
 
-.alert {
-  color: green !important;
+
+.input-error {
+  justify-self: center;
+  color: var(--primary-hover-red);
+  font-weight: 400;
+}
+
+.success-message {
+  color: #5a8d03;
+  font-weight: 900;
+  justify-self: center;
 }
 
 /***** CONTACS MEDİA ******/
@@ -627,6 +784,19 @@ textarea.form-control {
   }
 
 }
+
+@media( max-width :540px ) {
+
+  .contact {
+    overflow-x: hidden;
+  }
+
+  
+
+  
+
+}
+
 
 
 /******************** FOOTER COMPONENT **********************/
@@ -661,5 +831,4 @@ textarea.form-control {
     padding-top: 3rem;
   }
 
->>>>>>> Stashed changes
 }

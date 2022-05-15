@@ -2,32 +2,28 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Navbar from './Components/Navbar';
-<<<<<<< Updated upstream
-=======
 import Header from './Components/Header';
 import AboutMe from './Components/AboutMe';
 import Services from './Components/Services';
 import Experience from './Components/Experience'
 import Portfolio from './Components/Portfolio';
-import PopUpExtra from './Components/PopUpExtra/PopUpExtra';
 import Team from './Team/Team';
-import Contacts from './Components/Contacts';
 import Footer from './Components/Footer';
+import ContactsSoon from './Components/ContactSoon';
+
 
 
 
 // import Particles from "react-tsparticles";  // Başka bir zaman ayrıntılı bak
 
->>>>>>> Stashed changes
+
 
 function App() {
   return (
     <>
-<<<<<<< Updated upstream
-    
+
      <Navbar />
      
-=======
 
       {/* <Particles  
 
@@ -57,15 +53,23 @@ function App() {
       <Experience />
 
       <Portfolio />
+      
+
 
       {/* <PopUpExtra /> */}
 
       <Team />
 
-      <Contacts />
+      {/* <Contacts /> */}
+
+      <ContactsSoon />
+
+
+      {/* <ContactsExtra /> */}
 
       <Footer />
->>>>>>> Stashed changes
+
+
     
     
     </>

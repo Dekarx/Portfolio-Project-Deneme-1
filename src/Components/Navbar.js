@@ -1,7 +1,6 @@
 import React from "react"
 import logo from "../logo.png"
 
-import * as Scroll from 'react-scroll'
 import {Link} from "react-scroll"
 
 // React Fontawesome Imports
@@ -13,12 +12,7 @@ function Navbar() {
     <>
     
 
-<<<<<<< Updated upstream
-        <nav className="navbar navbar-expand-lg navbar-light bg-dark">
-=======
-        <nav className="navbar navbar-expand-lg navbar-light fixed-top">
->>>>>>> Stashed changes
-        
+        <nav className="navbar navbar-expand-lg navbar-light fixed-top">    
             <div className="container">
 
                 <Link smooth={true} to="home" className="navbar-brand" href="#">
@@ -43,24 +37,16 @@ function Navbar() {
                             <Link smooth={true} offset={-70} to="services" className="nav-link" href="#">Services</Link>
                         </li>
                         <li className="nav-item">
-<<<<<<< Updated upstream
-                            <a className="nav-link" href="#">How Work</a>
-=======
                             <Link smooth={true} offset={-70} to="experience" className="nav-link" href="#">Experience</Link>
->>>>>>> Stashed changes
                         </li>
                         <li className="nav-item">
                             <Link smooth={true} offset={-70} to="portfolio" className="nav-link" href="#">Portfolio</Link>
                         </li>
                         <li className="nav-item">
-<<<<<<< Updated upstream
-                            <a className="nav-link" href="#">Contacts</a>
-=======
                             <Link smooth={true} offset={-70} to="clients" className="nav-link" href="#">Happy Client</Link>
                         </li>
                         <li className="nav-item">
-                            <Link smooth={true} offset={-70} to="contacts" className="nav-link ayrı" href="#">Contacts</Link>
->>>>>>> Stashed changes
+                            <Link smooth={true} offset={-70} to="contacts" className="nav-link" href="#">Contacts</Link>
                         </li>
                     
                     </ul>
